@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Index</title>
+  </head>
+  <body>
+    <h1>Welcome to the Great Number Game!</h1>
+    <p>I am thinking of number between 1 and 100</p>
+    <p>Take a guess!</p>
+    <form action="/result" method="post">
+      <p><input type="number" name="number_input" placeholder=""></p>
+      <p><button type="submit" name="button">Submit</button></p>
+    </form>
+    {% if session['message'] == 'Higher' %}
+      <p class='higher'>Too high!</p>
+    {% elif session['message'] == "Lower" %}
+      <p class='lower'>Too low!</p>
+    {% else %}
+      <p class='winner'>{{ session['someKey'] }} was the number!</p>
+      <a href="/winner">Try again!</a>
+    {% endif %}
+  </body>
+</html>
