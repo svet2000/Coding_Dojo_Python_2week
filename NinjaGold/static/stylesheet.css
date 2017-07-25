@@ -1,0 +1,13 @@
+*{
+  background-color: grey;
+  text-align: center;
+}
+
+
+div{
+  border: 5px solid black;
+  display: inline-block;
+  background-color: gold;
+  width: 22%;
+  height: 200px;
+}
